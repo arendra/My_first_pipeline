@@ -1,8 +1,10 @@
 pipeline{
 	agent any
-	def nodeHome="/root/node-v6.3.1-linux-x64"
-	echo ${nodeHome}
-	env.PATH="${nodeHome}/bin:${env.PATH}"
+	environment {
+		def nodeHome="/root/node-v6.3.1-linux-x64"
+		// echo ${nodeHome}
+		env.PATH="${nodeHome}/bin:${env.PATH}"
+	}
 	stages{
 		stage('build'){
 			steps {
