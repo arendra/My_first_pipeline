@@ -1,4 +1,11 @@
-stage 'inital'
-node {
- echo "hello jenkins pipeline"
+pipeline{
+	agent any
+	stages{
+		stage('build'){
+			echo 'building project..'
+			npm install
+		}
+		stage('deploy'){
+			npm start
+		}
 }
