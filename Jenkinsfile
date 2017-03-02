@@ -20,6 +20,7 @@
 //		}
 //	}
 // }
+stages {
 stage 'build'
 node{
 	def nodeHome="/root/node-v6.3.1-linux-x64"
@@ -36,4 +37,5 @@ node{
         env.PATH="${nodeHome}/bin:${env.PATH}"
         echo "Deploying nodejs code..."
         sh 'npm start'
+}
 }
