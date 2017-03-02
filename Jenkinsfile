@@ -20,7 +20,7 @@
 //		}
 //	}
 // }
-stages {
+// stages {
 stage 'build'
 node{
 	def nodeHome="/root/node-v6.3.1-linux-x64"
@@ -30,12 +30,12 @@ node{
 	sh 'npm install'
 }
 
-stage 'deploy'
-node{
-	def nodeHome="/root/node-v6.3.1-linux-x64"
-        echo ${nodeHome}
-        env.PATH="${nodeHome}/bin:${env.PATH}"
-        echo "Deploying nodejs code..."
-        sh 'npm start'
-}
-}
+// stage 'deploy'
+// node{
+//	def nodeHome="/root/node-v6.3.1-linux-x64"
+//        echo ${nodeHome}
+//        env.PATH="${nodeHome}/bin:${env.PATH}"
+//        echo "Deploying nodejs code..."
+//        sh 'npm start'
+// }
+// }
