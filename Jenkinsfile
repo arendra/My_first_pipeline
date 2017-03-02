@@ -8,4 +8,5 @@ pipeline{
 		stage('deploy'){
 			npm start
 		}
+	}
 }
