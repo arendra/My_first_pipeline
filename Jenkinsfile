@@ -4,12 +4,13 @@ pipeline{
 		stage('build'){
 			steps {
 				echo 'building project..'
-				sh '/root/node-v6.3.1-linux-x64/bin/npm install'
+				sh 'export PATH=$PATH:/root/node-v6.3.1-linux-x64/bin'
+				sh 'npm install'
 			}
 		}
 		stage('deploy'){
 			steps {
-				sh '/root/node-v6.3.1-linux-x64/bin/npm start'
+				sh 'npm start'
 			}
 		}
 	}
