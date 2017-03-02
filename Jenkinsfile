@@ -36,6 +36,6 @@ node{
 //        echo ${nodeHome}
         env.PATH="${nodeHome}/bin:${env.PATH}"
         echo "Deploying nodejs code..."
-        sh 'nohup npm start & > /nodejs_app.log'
+        sh 'npm start'
 }
 // }
